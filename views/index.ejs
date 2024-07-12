@@ -11,18 +11,25 @@
 </head>
 <body>
     
-
-<h1 id="colorful-heading">Riddle</h1>
 <div>
-    <p id="riddle">
+<h1 id="colorful-heading">Riddle</h1>
+</div>
+<div id="riddle">
+<div class="left-card">
+    <p>
         <%=riddle %>
     </p>
 </div>
-<div>
+<div class="right-card">
 <p>
     <%=answer %>
 </p>
 </div>
+</div>
+
+<form action="/" method="GET">
+    <input type="submit" value="New Riddle">
+  </form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>

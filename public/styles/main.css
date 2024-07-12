@@ -1,13 +1,15 @@
 :root{ 
-    --Dark-green: hex(#037e37);
-    --Green: hex(#05ba12);
-    --Light-green: hex(#70f01f);
-    --Black: hex(#332d2d);
-    --Off-white: hex(#F8F7F3);
-    --Cream: hex(#ececec);
-    --Purple: hex(#551a8b);
-    --Dark-purple: hex(#370566);
-    --font-family: 'Mulish', sans-serif;
+    --Dark-green: #037e37;
+    --Green: #05ba12;
+    --Light-green: #70f01f;
+    --Black: #332d2d;
+    --Off-white: #F8F7F3;
+    --Cream: #ececec;
+    --Purple: #551a8b;
+    --Dark-purple: #370566;
+    --font-family: 'Plus Jakarta Sans', sans-serif;
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height)/ 1.5);
 }
 
 *{
@@ -28,4 +30,49 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+h1{
+    font-size: 5rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 span{
+    color: var(--Dark-green);
+}
+
+h1 span:nth-child(1) {
+    color: var(--Black);
+}
+
+h1 span:nth-child(2) {
+    color: var(--Green);
+}
+
+h1 span:nth-child(3) {
+    color: var(--Light-green);
+}
+
+h1 span:nth-child(4) {
+    color: var(--Purple);
+}
+
+h1 span:nth-child(5) {
+    color: var(--Dark-purple);
+}
+
+#riddle {
+    font-size: 1.5rem;
+    padding: 0 30px;
+    font-weight: 200;
+    margin: 0 0 30px;
+    max-width: 1120px;
 }

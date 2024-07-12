@@ -10,6 +10,7 @@ const API_URL = "https://riddles-api.vercel.app/random";
 //Use the public folder for the static files
 app.use(express.static("public"));
 
+
 //Get random riddle and display answer
 app.get("/", async (req, res) => {
     try {

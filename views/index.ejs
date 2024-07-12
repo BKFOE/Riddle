@@ -6,15 +6,15 @@
     <title>Riddle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
     
-</body>
-<h1>Riddle</h1>
+
+<h1 id="colorful-heading">Riddle</h1>
 <div>
-    <p>
+    <p id="riddle">
         <%=riddle %>
     </p>
 </div>
@@ -23,4 +23,20 @@
     <%=answer %>
 </p>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        const heading = $("#colorful-heading");
+        const text = heading.text();
+        heading.html('');
+
+        text.split('').forEach(letter => {
+            const span = $("<span></span>");
+            span.text(letter);
+            heading.append(span);
+        });
+    });
+</script>
+</body>
 </html>
